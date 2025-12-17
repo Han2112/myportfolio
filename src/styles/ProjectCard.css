@@ -1,0 +1,88 @@
+/* src/styles/ProjectCard.css */
+
+.project-card {
+  /* Warna kartu: Ungu Gelap (Indigo) solid agar tulisan terbaca jelas */
+  background: #2b0663 !important; 
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--main-pink) !important; /* Border Pink saat hover */
+  box-shadow: 0 20px 40px rgba(58, 12, 163, 0.4);
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 220px; /* Tinggi gambar konsisten */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1); /* Zoom gambar saat hover */
+}
+
+/* Overlay saat hover gambar */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient Pink ke Ungu transparan */
+  background: linear-gradient(to bottom, rgba(247, 37, 133, 0.8), rgba(58, 12, 163, 0.9));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.card-img-wrapper:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 25px !important;
+}
+
+.project-title {
+  color: var(--main-gold) !important; /* Judul Proyek Emas */
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  color: var(--text-muted) !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  margin-top: auto;
+}
+
+.tech-badge {
+  font-size: 0.75rem;
+  color: white;
+  background: var(--main-purple); /* Badge teknologi Ungu */
+  padding: 5px 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+}

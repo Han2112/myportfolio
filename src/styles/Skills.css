@@ -1,0 +1,51 @@
+/* src/styles/Skills.css */
+
+.skill-card {
+  /* Background Kaca Baru */
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 20px;
+  padding: 35px;
+  height: 100%;
+  transition: 0.4s ease;
+}
+
+.skill-card:hover {
+  background: rgba(114, 9, 183, 0.4); /* Ungu transparan saat hover */
+  transform: translateY(-10px);
+  border-color: var(--main-pink); /* Border jadi Pink saat hover */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.skill-title {
+  color: var(--main-gold); /* Judul Emas */
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--main-purple); /* Border Ungu */
+  transition: 0.3s;
+}
+
+.skill-badge:hover {
+  background: var(--main-pink); /* Jadi Pink saat di-hover */
+  border-color: var(--main-pink);
+  transform: scale(1.1);
+}

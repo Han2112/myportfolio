@@ -1,0 +1,83 @@
+/* src/styles/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* --- PALET WARNA BARU (Dari Gambar Anda) --- */
+  --main-indigo: #3a0ca3;   /* Biru Tua/Ungu Gelap (Warna Teratas) */
+  --main-purple: #7209b7;   /* Ungu Vibrant (Warna Kedua) */
+  --main-pink:   #f72585;   /* Pink Magenta (Warna Ketiga - Aksen Utama) */
+  --main-gold:   #ffb703;   /* Kuning Emas (Warna Terbawah - Aksen Sekunder) */
+
+  /* --- TEXT --- */
+  --text-primary: #ffffff;  
+  --text-muted:   #e2e8f0; /* Sedikit lebih terang biar kontras */
+
+  /* --- GRADIENT BACKGROUND BARU --- */
+  /* Campuran halus dari warna-warna baru */
+  --bg-gradient: linear-gradient(135deg, var(--main-indigo) 20%, #240046 100%); 
+  
+  /* --- EFEK KACA (DIGITAL GLASS) BARU --- */
+  /* Menggunakan warna ungu baru dengan transparansi */
+  --glass-bg: rgba(58, 12, 163, 0.6); 
+  --glass-border: 1px solid rgba(255, 183, 3, 0.3); /* Border emas tipis */
+  --glass-blur: blur(16px);
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--main-indigo);
+  background-image: var(--bg-gradient) !important;
+  background-attachment: fixed; /* Background tetap saat discroll (efek premium) */
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Override Tombol Bootstrap Standar agar sesuai tema */
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: var(--main-pink) !important;
+    border-color: var(--main-pink) !important;
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    color: var(--main-gold) !important;
+    border-color: var(--main-gold) !important;
+    font-weight: 600;
+}
+.btn-outline-primary:hover, .btn-outline-primary:active {
+    background-color: var(--main-gold) !important;
+    color: var(--main-indigo) !important;
+    border-color: var(--main-gold) !important;
+}
+
+/* Scrollbar Kustom */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--main-indigo); }
+::-webkit-scrollbar-thumb { 
+    background: linear-gradient(var(--main-purple), var(--main-pink)); 
+    border-radius: 6px; 
+    border: 3px solid var(--main-indigo);
+}
+
+/* Utility Class untuk Judul Section */
+.section-header h2 {
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.line-separator {
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(to right, var(--main-pink), var(--main-gold));
+  margin: 0 auto;
+  border-radius: 5px;
+}
